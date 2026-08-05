@@ -104,3 +104,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Interactive Timeline
+document.addEventListener('DOMContentLoaded', () => {
+    const timelineSteps = document.querySelectorAll('.timeline-step');
+    const timelineContents = document.querySelectorAll('.timeline-content');
+
+    if (timelineSteps.length > 0) {
+        timelineSteps.forEach(step => {
+            step.addEventListener('click', () => {
+                // Remove active class from all steps and contents
+                timelineSteps.forEach(s => s.classList.remove('active'));
+                timelineContents.forEach(c => c.classList.remove('active'));
+
+                // Add active class to clicked step
+                step.classList.add('active');
+
+                // Add active class to target content
+                const targetId = step.getAttribute('data-target');
+                const targetContent = document.getElementById(targetId);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+    }
+});
+
