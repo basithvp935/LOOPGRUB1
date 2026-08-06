@@ -59,6 +59,9 @@ img {
 /* =========================================
    Typography & Layout Utilities
    ========================================= */
+p {
+    text-align: justify;
+}
 .container {
     max-width: 1280px;
     margin: 0 auto;
@@ -811,6 +814,7 @@ section {
     font-size: 0.9rem;
     color: var(--light-gray);
     line-height: 1.5;
+    text-align: center;
 }
 
 /* =========================================
@@ -1088,7 +1092,7 @@ section {
     
     .hero {
         flex-direction: column;
-        padding-top: 6rem;
+        padding-top: 10rem;
     }
     
     .hero-container,
@@ -1211,7 +1215,7 @@ section {
 @media (max-width: 768px) {
     .section-desc,
     .hero-desc {
-        text-align: left;
+        text-align: justify;
     }
 
     .stats-wrapper {
@@ -1287,11 +1291,9 @@ section {
         grid-template-columns: 1fr;
     }
     
-    .lab-content-col,
-    .why-choose-us .container,
-    .statistics .container,
-    .section-header {
-        text-align: left !important;
+
+    .lab-content-col {
+        padding: 1.5rem 1rem !important;
     }
     .banner-visuals {
         flex-direction: column;
@@ -3855,6 +3857,95 @@ section {
 
 /* Tablets and small desktops (max-width: 992px) */
 @media (max-width: 992px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    .about-hero, .lab-hero, .tech-hero, .materials-hero, .sustainability-hero, .contact-hero {
+        display: flex !important;
+        flex-direction: column;
+        padding-top: 8rem;
+    }
+    
+    .about-hero-visual, .lab-hero-visual, .tech-hero-visual, .materials-hero-visual, .sustainability-hero-visual, .contact-hero-bg {
+        position: relative !important;
+        width: 100% !important;
+        height: 300px !important;
+        order: 2;
+        padding: 0 !important;
+        margin-top: 2rem;
+    }
+    
+    .contact-hero-bg {
+        -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%) !important;
+        mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%) !important;
+    }
+
+    .about-hero-container, .lab-hero-container, .tech-hero-container, .materials-hero-container, .sustainability-hero-container, .contact-hero-container {
+        order: 1;
+        width: 100%;
+    }
+    
+    .about-hero-content, .lab-hero-content, .tech-hero-content, .materials-hero-content, .sustainability-hero-content, .contact-hero-content {
+        max-width: 100% !important;
+    }
+    
+    .vision-mission {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+    }
+    .mission-card {
+        padding-right: 0 !important;
+        border-right: none !important;
+    }
+    .vision-card {
+        padding-left: 0 !important;
+    }
+
+    /* Journey Timeline Slider Fix */
+    .timeline-nav-container {
+        overflow-x: auto;
+        justify-content: flex-start !important;
+        gap: 1.5rem;
+        padding-bottom: 2rem;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+    .timeline-nav-container::-webkit-scrollbar {
+        display: none;
+    }
+    .timeline-nav-container::before {
+        content: 'Swipe \2192';
+        position: absolute;
+        top: 0;
+        right: 15px;
+        font-size: 0.85rem;
+        font-weight: bold;
+        color: var(--accent-orange);
+        animation: swipeHint 1.5s infinite;
+        pointer-events: none;
+        z-index: 10;
+    }
+    @keyframes swipeHint {
+        0%, 100% { transform: translateX(0); opacity: 0.5; }
+        50% { transform: translateX(5px); opacity: 1; }
+    }
+    .timeline-step {
+        width: 130px !important;
+        min-width: 130px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        margin-top: 20px;
+    }
+    .timeline-line {
+        width: 850px !important;
+        left: 65px !important;
+        top: 75px !important;
+        bottom: auto !important;
+        height: 2px !important;
+    }
+
     .features-wrapper,
     .lab-features-box .lab-features-grid,
     .process-grid,
@@ -3893,8 +3984,23 @@ section {
     .why-img-col, .why-content-col {
         width: 100% !important;
     }
+    .why-img-col img {
+        -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%) !important;
+        mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%) !important;
+    }
+    .contact-banner {
+        flex-direction: column;
+        padding: 0;
+    }
+    .banner-items {
+        padding: 2.5rem 1.5rem;
+    }
     .banner-image {
-        display: none;
+        position: relative;
+        width: 100%;
+        height: 250px;
+        -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%) !important;
+        mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%) !important;
     }
 }
 
@@ -3912,20 +4018,71 @@ section {
     .equipment-grid,
     .partner-logos,
     .trust-banner .banner-container,
-    .contact-grid {
+    .contact-grid,
+    .contact-info-grid,
+    .form-map-container,
+    .banner-items {
         grid-template-columns: 1fr !important;
     }
+    .value-item, .approach-step {
+        flex: 1 1 100% !important;
+        width: 100% !important;
+    }
+    .contact-form-wrapper, .contact-map-wrapper {
+        padding: 1.5rem !important;
+    }
+    .lab-feature span br,
+    .cap-content h4 br {
+        display: none;
+    }
     .hero-content {
-        text-align: center;
+        text-align: left;
     }
     .hero-buttons {
-        justify-content: center;
+        justify-content: flex-start;
     }
     .section-title {
         font-size: 1.8rem;
     }
     .footer-grid {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .contact-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    .contact-buttons .btn,
+    .banner-content .btn {
+        width: 100%;
+        justify-content: center;
+        white-space: nowrap;
+    }
+    .form-row {
+        flex-direction: column;
+    }
+    .form-footer {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: stretch;
+    }
+    .btn-submit {
+        width: 100%;
+        justify-content: center;
+    }
+    .sus-title {
+        font-size: 2.5rem !important;
+    }
+    .approach-step p {
+        max-width: 90% !important;
+    }
+    .approach-arrow {
+        position: relative !important;
+        right: auto !important;
+        top: auto !important;
+        transform: rotate(90deg) !important;
+        margin: 2rem auto 0 !important;
+        display: block;
+        text-align: center;
     }
 }
 
@@ -3933,6 +4090,10 @@ section {
 @media (max-width: 480px) {
     .section-title {
         font-size: 1.5rem !important;
+    }
+    .sus-title {
+        font-size: 2rem !important;
+        word-wrap: break-word;
     }
     .process-step .step-arrow {
         transform: rotate(90deg);
@@ -3942,6 +4103,7 @@ section {
     }
     .lab-feature {
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
+        padding-left: 3.5rem;
     }
 }
