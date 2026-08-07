@@ -62,7 +62,8 @@ img {
    ========================================= */
 p {
     text-align: left;
-    letter-spacing: 1px;
+    word-spacing: normal;
+    letter-spacing: normal;
     hyphens: auto;
     -webkit-hyphens: auto;
 }
@@ -1097,7 +1098,7 @@ section {
     
     .hero {
         flex-direction: column;
-        padding-top: 10rem;
+        padding-top: 6rem;
     }
     
     .hero-container,
