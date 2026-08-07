@@ -208,10 +208,10 @@ section {
 }
 
 .logo-img {
-    height: 145px;
+    height: 165px;
     width: auto;
     object-fit: contain;
-    margin: -35px 0;
+    margin: -45px 0;
 }
 
 .nav-links {
