@@ -1123,7 +1123,7 @@ section {
     
     .hero-visual {
         height: 450px;
-        order: 1;
+        order: -1;
     }
     
     .infographic {
@@ -1284,11 +1284,11 @@ section {
     .hero-buttons .btn { width: 100%; text-align: center; }
     
     .hero-visual {
-        height: 350px;
+        height: 400px;
     }
     
     .infographic {
-        transform: translate(-50%, -50%) scale(0.75);
+        transform: translate(-50%, -50%) scale(0.9);
     }
     .industry-grid,
     .lab-features-grid {
