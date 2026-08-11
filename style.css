@@ -919,6 +919,7 @@ body.menu-open {
     position: relative;
     overflow: hidden;
     min-height: 350px;
+
 }
 
 .banner-bg-left {
@@ -1785,6 +1786,7 @@ body.menu-open {
         left: 50%;
         width: 2px;
         height: auto;
+        display: none;
     }
 
     .timeline-line::after {
@@ -4282,6 +4284,7 @@ body.menu-open {
 
 /* 4. Mobile Devices (<= 768px) */
 @media (max-width: 768px) {
+
     .container,
     .lab-container,
     .tech-hero-grid,
