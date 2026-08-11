@@ -10,15 +10,67 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 2. Mobile Menu Toggle (Basic implementation)
+    // 2. Mobile Menu Toggle (Enhanced Drawer Implementation)
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
     
+    // Create mobile backdrop if not present
+    let backdrop = document.querySelector('.nav-backdrop');
+    if (!backdrop && navbar) {
+        backdrop = document.createElement('div');
+        backdrop.className = 'nav-backdrop';
+        document.body.appendChild(backdrop);
+    }
+    
+    function toggleMobileMenu(open) {
+        const isOpen = open !== undefined ? open : !navLinks.classList.contains('active');
+        
+        if (isOpen) {
+            navLinks.classList.add('active');
+            mobileBtn?.classList.add('active');
+            backdrop?.classList.add('active');
+            document.body.classList.add('menu-open');
+            mobileBtn?.setAttribute('aria-expanded', 'true');
+            
+            const icon = mobileBtn?.querySelector('i');
+            if (icon) {
+                icon.className = 'ph ph-x';
+            }
+        } else {
+            navLinks.classList.remove('active');
+            mobileBtn?.classList.remove('active');
+            backdrop?.classList.remove('active');
+            document.body.classList.remove('menu-open');
+            mobileBtn?.setAttribute('aria-expanded', 'false');
+            
+            const icon = mobileBtn?.querySelector('i');
+            if (icon) {
+                icon.className = 'ph ph-list';
+            }
+        }
+    }
+
     if (mobileBtn && navLinks) {
-        mobileBtn.addEventListener('click', () => {
-            // Note: In a real app, we'd add CSS for .nav-links.active
-            // For now, it just prevents errors
-            navLinks.classList.toggle('active');
+        mobileBtn.setAttribute('aria-expanded', 'false');
+        mobileBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMobileMenu();
+        });
+        
+        if (backdrop) {
+            backdrop.addEventListener('click', () => toggleMobileMenu(false));
+        }
+
+        // Close menu on link clicks
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => toggleMobileMenu(false));
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                toggleMobileMenu(false);
+            }
         });
     }
 
