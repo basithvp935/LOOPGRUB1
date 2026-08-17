@@ -135,14 +135,22 @@ document.addEventListener('DOMContentLoaded', () => {
         counterObserver.observe(statsSection);
     }
 
-    // 5. Smooth Scrolling for Anchor Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // 5. Smooth Scrolling for Anchor Links (Handles both in-page and cross-page anchor offset)
+    document.querySelectorAll('a[href*="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
-            if (href !== '#') {
-                e.preventDefault();
-                const target = document.querySelector(href);
+            if (href === '#') return;
+
+            const hashIndex = href.indexOf('#');
+            const targetId = href.substring(hashIndex);
+            const path = href.substring(0, hashIndex);
+            
+            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+
+            if (path === '' || path === currentPath) {
+                const target = document.querySelector(targetId);
                 if (target) {
+                    e.preventDefault();
                     const headerOffset = 80;
                     const elementPosition = target.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
@@ -151,10 +159,28 @@ document.addEventListener('DOMContentLoaded', () => {
                          top: offsetPosition,
                          behavior: "smooth"
                     });
+                    
+                    history.pushState(null, null, targetId);
                 }
             }
         });
     });
+
+    // Handle hash on initial page load (for cross-page anchor links in footer)
+    if (window.location.hash) {
+        setTimeout(() => {
+            const target = document.querySelector(window.location.hash);
+            if (target) {
+                const headerOffset = 80;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+        }, 100);
+    }
 });
 
 // Interactive Timeline
