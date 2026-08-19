@@ -44,22 +44,20 @@
     </nav>
 
     <!-- Contact Hero Section -->
-    <section class="contact-hero">
-        <div class="contact-hero-bg">
-            <img src="assets/images/images/LOOP ABOUT.jpeg" alt="Loop Grub Facility" class="contact-bg-img">
-        </div>
-        <div class="container contact-hero-container">
-            <div class="contact-hero-content">
-                <div class="breadcrumb">
-                    <a href="index.html">Home</a> <i class="ph-bold ph-caret-right"></i> <span>Contact Us</span>
-                </div>
-                <h1 class="contact-title">GET IN TOUCH</h1>
-                <div class="contact-title-line"></div>
-                <h2 class="contact-subtitle">We're here to help you turn waste into value.</h2>
-                <p class="contact-desc">Have a question, partnership proposal, or want to know more about our solutions? We would love to hear from you.</p>
-                <div class="contact-buttons">
-                    <a href="#message" class="btn btn-brown">Send Us a Message <i class="ph ph-arrow-right"></i></a>
-                </div>
+    <section class="about-hero dark-hero">
+        <div class="container about-hero-container-centered" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div class="hero-tag" data-animate="fade-up">
+                <span class="dot"></span> LOOPGRUB SOLUTIONS
+            </div>
+            <h1 class="about-hero-title" data-animate="fade-up" style="transition-delay: 0.1s; font-size: 4rem;">Get in <span class="text-green">Touch</span></h1>
+            <p class="about-hero-desc" data-animate="fade-up" style="transition-delay: 0.2s" style="max-width: 800px; text-align: center;">
+                <strong>We're here to help you turn waste into value.</strong><br>
+                Have a question, partnership proposal, or want to know more about our solutions? We would love to hear from you.
+            </p>
+            <div class="hero-bottom-pill" data-animate="fade-up" style="transition-delay: 0.3s" style="margin-top: 2.5rem;">
+                <a href="index.html"><i class="ph ph-house"></i> Home</a> 
+                <i class="ph ph-caret-right separator"></i> 
+                <span class="text-green">Contact Us</span>
             </div>
         </div>
     </section>
@@ -105,44 +103,61 @@
     <!-- Form and Map Section -->
     <section id="enquiry" class="contact-form-map section-padding" style="padding-top: 1.5rem; padding-bottom: 2rem;">
         <div class="container form-map-container">
-            <!-- Left Side: Form -->
-            <div class="contact-form-wrapper" id="message">
-                <div class="form-header">
-                    <div class="line-left"></div>
-                    <h2>SEND US A MESSAGE</h2>
+            <!-- Split Layout for Image and Form -->
+            <div class="contact-form-layout">
+                <!-- Left Side: Image -->
+                <div class="form-image-col">
+                    <img src="assets/images/images/LOOP%20ABOUT.jpeg" alt="LoopGrub Facility">
                 </div>
-                <form class="contact-form">
-                    <div class="form-row">
-                        <input type="text" placeholder="Your Name *" required>
-                        <input type="text" placeholder="Company / Organization">
+                
+                <!-- Right Side: Form -->
+                <div class="contact-form-wrapper" id="message">
+                    <div class="form-header">
+                        <div class="line-left"></div>
+                        <h2>SEND US A MESSAGE</h2>
                     </div>
-                    <div class="form-row">
-                        <input type="email" placeholder="Email Address *" required>
-                        <input type="tel" placeholder="Phone Number">
-                    </div>
-                    <div class="form-row">
-                        <input type="text" placeholder="Subject *" required>
-                    </div>
-                    <div class="form-row">
-                        <textarea placeholder="Your Message *" rows="5" required></textarea>
-                    </div>
-                    <div class="form-footer">
-                        <label class="checkbox-container">
-                            <input type="checkbox" required>
-                            <span class="checkmark"></span>
-                            I agree to the privacy policy.
-                        </label>
-                        <button type="submit" class="btn btn-submit">Send Message <i class="ph ph-paper-plane-right"></i></button>
-                    </div>
-                </form>
+                    <form class="contact-form">
+                        <div class="form-row">
+                            <input type="text" placeholder="Your Name *" required>
+                            <input type="text" placeholder="Company / Organization">
+                        </div>
+                        <div class="form-row">
+                            <input type="email" placeholder="Email Address *" required>
+                            <input type="tel" placeholder="Phone Number">
+                        </div>
+                        <div class="form-row">
+                            <input type="text" placeholder="Subject *" required>
+                        </div>
+                        <div class="form-row">
+                            <textarea placeholder="Your Message *" rows="5" required></textarea>
+                        </div>
+                        <div class="form-footer">
+                            <label class="checkbox-container">
+                                <input type="checkbox" required>
+                                <span class="checkmark"></span>
+                                I agree to the privacy policy.
+                            </label>
+                            <button type="submit" class="btn btn-submit">Send Message <i class="ph ph-paper-plane-right"></i></button>
+                        </div>
+                    </form>
+                </div>
             </div>
             
-
+            <!-- Map Section -->
+            <div style="width: 100%; max-width: 1200px; margin-top: 4rem;">
+                <div class="form-header" style="margin-bottom: 1.5rem;">
+                    <div class="line-left"></div>
+                    <h2>OUR LOCATION</h2>
+                </div>
+                <div class="contact-map-wrapper" style="width: 100%; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15535.1528659141!2d77.06558835!3d13.3015469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb02dd0bb0bb15b%3A0xc3bba4d29a008c2a!2sHirehalli%20Industrial%20Area%2C%20Tumakuru%2C%20Karnataka%20572104!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="450" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Trust Banner -->
-    <section class="trust-banner section-padding" style="padding-top: 1rem;">
+    <section class="trust-banner section-padding" style="padding-top: 1rem; padding-bottom: 2rem;">
         <div class="container">
             <div class="contact-banner">
                 <div class="banner-items">

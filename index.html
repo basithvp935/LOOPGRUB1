@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loop Grub Solutions | Turning Waste into Resources</title>
-    <meta name="description" content="Technology-driven Food Resource Recovery Solutions. We recover approved food materials and transform them into valuable resources.">
-    
+    <meta name="description"
+        content="Technology-driven Food Resource Recovery Solutions. We recover approved food materials and transform them into valuable resources.">
+
     <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    
+
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?v=2.1">
+    <link rel="stylesheet" href="style.css?v=2.2">
 </head>
+
 <body>
 
     <!-- Sticky Navigation -->
@@ -33,10 +37,11 @@
                 <li><a href="technology.html">Technology</a></li>
                 <li><a href="sustainability.html">Sustainability</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li class="mobile-cta-item"><a href="contact.html" class="btn btn-primary btn-mobile">Get In Touch <i class="ph ph-arrow-right"></i></a></li>
+                <li class="mobile-cta-item"><a href="contact.html" class="btn btn-primary btn-mobile">Get In Touch <i
+                            class="ph ph-arrow-right"></i></a></li>
             </ul>
             <a href="contact.html" class="btn btn-primary">Get In Touch <i class="ph ph-arrow-right"></i></a>
-            
+
             <button class="mobile-menu-btn" aria-label="Toggle Menu">
                 <i class="ph ph-list"></i>
             </button>
@@ -46,24 +51,33 @@
     <!-- Hero Section -->
     <header id="home" class="hero">
         <div class="hero-image-wrapper">
-            <img src="assets/images/foo.jpeg" alt="Facility Image" class="hero-img">
+            <video autoplay loop muted playsinline class="hero-img">
+                <source src="assets/images/images/loop.mp4" type="video/mp4">
+            </video>
         </div>
         <div class="container hero-container">
             <div class="hero-content" data-animate="fade-up">
                 <h1 class="hero-title">
-                    Turning<br>Waste into<br><span class="highlight">Resources</span>
+                    <span id="typed-title"></span>
                 </h1>
                 <h2 class="hero-subtitle">Technology-driven Food Resource<br>Recovery Solutions</h2>
                 <p class="hero-desc">
-                    We recover approved food materials and transform them into valuable resources through innovative and sustainable processing solutions.
+                    We recover approved food materials and transform them into valuable resources through innovative and
+                    sustainable processing solutions.
                 </p>
                 <div class="hero-buttons">
                     <a href="#solutions" class="btn btn-dark">Explore Solutions <i class="ph ph-arrow-right"></i></a>
                     <a href="#about" class="btn btn-outline">Learn More <i class="ph ph-arrow-right"></i></a>
                 </div>
             </div>
-            
-            <div class="hero-visual" data-animate="fade-left">
+
+        </div>
+    </header>
+
+    <!-- Statistics Section -->
+    <section class="statistics">
+        <div class="container">
+            <div class="hero-visual" data-animate="fade-right">
                 <!-- Infographic elements overlay -->
                 <div class="infographic">
                     <div class="cycle-circle">
@@ -99,14 +113,18 @@
                                 <span class="center-text">Turning Waste<br>into Resources</span>
                             </div>
                         </div>
-                        
+
                         <!-- Connecting arrows (CSS generated) -->
                         <svg class="cycle-arrows" viewBox="0 0 200 200">
                             <!-- SVG arrows for infographic -->
-                            <path d="M131,15 A90,90 0 0,1 185,69" fill="none" stroke="var(--dark-green)" stroke-width="2.5" marker-end="url(#arrowhead)"/>
-                            <path d="M185,131 A90,90 0 0,1 131,185" fill="none" stroke="var(--dark-green)" stroke-width="2.5" marker-end="url(#arrowhead)"/>
-                            <path d="M69,185 A90,90 0 0,1 15,131" fill="none" stroke="var(--dark-green)" stroke-width="2.5" marker-end="url(#arrowhead)"/>
-                            <path d="M15,69 A90,90 0 0,1 69,15" fill="none" stroke="var(--dark-green)" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+                            <path d="M131,15 A90,90 0 0,1 185,69" fill="none" stroke="var(--dark-green)"
+                                stroke-width="2.5" marker-end="url(#arrowhead)" />
+                            <path d="M185,131 A90,90 0 0,1 131,185" fill="none" stroke="var(--dark-green)"
+                                stroke-width="2.5" marker-end="url(#arrowhead)" />
+                            <path d="M69,185 A90,90 0 0,1 15,131" fill="none" stroke="var(--dark-green)"
+                                stroke-width="2.5" marker-end="url(#arrowhead)" />
+                            <path d="M15,69 A90,90 0 0,1 69,15" fill="none" stroke="var(--dark-green)"
+                                stroke-width="2.5" marker-end="url(#arrowhead)" />
                             <defs>
                                 <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
                                     <polygon points="0 0, 8 3, 0 6" fill="var(--dark-green)" />
@@ -116,12 +134,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
-
-    <!-- Statistics Section -->
-    <section class="statistics">
-        <div class="container">
             <div class="stats-wrapper" data-animate="zoom-in">
                 <div class="stat-item">
                     <i class="ph ph-recycle"></i>
@@ -131,9 +143,9 @@
                         <p class="stat-desc">Food Materials Recycled</p>
                     </div>
                 </div>
-                
+
                 <div class="stat-divider"></div>
-                
+
                 <div class="stat-item">
                     <i class="ph ph-shield-check"></i>
                     <div class="stat-text">
@@ -142,9 +154,9 @@
                         <p class="stat-desc">Efficiency</p>
                     </div>
                 </div>
-                
+
                 <div class="stat-divider"></div>
-                
+
                 <div class="stat-item">
                     <i class="ph ph-cpu"></i>
                     <div class="stat-text">
@@ -155,7 +167,7 @@
                 </div>
 
                 <div class="stat-divider"></div>
-                
+
                 <div class="stat-item">
                     <i class="ph ph-flask"></i>
                     <div class="stat-text">
@@ -174,9 +186,10 @@
             <div class="section-header text-center" data-animate="fade-up">
                 <span class="section-tag">— FROM TRUSTED INDUSTRY SOURCES —</span>
                 <h2 class="section-title">Partnering with Leading Businesses for a Cleaner, Greener Tomorrow</h2>
-                <p class="section-desc">We work with leading industries to recover value from approved food materials.</p>
+                <p class="section-desc">We work with leading industries to recover value from approved food materials.
+                </p>
             </div>
-            
+
             <div class="industry-grid">
                 <!-- Card 1 -->
                 <div class="industry-card" data-animate="fade-up" style="transition-delay: 0.1s">
@@ -190,7 +203,7 @@
                         <span class="btn-view-details">View Details <i class="ph ph-arrow-right"></i></span>
                     </div>
                 </div>
-                
+
                 <!-- Card 2 -->
                 <div class="industry-card" data-animate="fade-up" style="transition-delay: 0.2s">
                     <div class="card-img-wrapper">
@@ -203,7 +216,7 @@
                         <span class="btn-view-details">View Details <i class="ph ph-arrow-right"></i></span>
                     </div>
                 </div>
-                
+
                 <!-- Card 3 -->
                 <div class="industry-card" data-animate="fade-up" style="transition-delay: 0.3s">
                     <div class="card-img-wrapper">
@@ -216,7 +229,7 @@
                         <span class="btn-view-details">View Details <i class="ph ph-arrow-right"></i></span>
                     </div>
                 </div>
-                
+
                 <!-- Card 4 -->
                 <div class="industry-card" data-animate="fade-up" style="transition-delay: 0.4s">
                     <div class="card-img-wrapper">
@@ -229,7 +242,7 @@
                         <span class="btn-view-details">View Details <i class="ph ph-arrow-right"></i></span>
                     </div>
                 </div>
-                
+
                 <!-- Card 5 -->
                 <div class="industry-card" data-animate="fade-up" style="transition-delay: 0.5s">
                     <div class="card-img-wrapper">
@@ -242,7 +255,7 @@
                         <span class="btn-view-details">View Details <i class="ph ph-arrow-right"></i></span>
                     </div>
                 </div>
-                
+
                 <!-- Card 6 -->
                 <div class="industry-card" data-animate="fade-up" style="transition-delay: 0.6s">
                     <div class="card-img-wrapper">
@@ -256,9 +269,10 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-4" style="margin-top: 3rem;">
-                <a href="#industries" class="btn btn-outline-orange">View All Industries <i class="ph ph-arrow-right"></i></a>
+                <a href="#industries" class="btn btn-outline-orange">View All Industries <i
+                        class="ph ph-arrow-right"></i></a>
             </div>
         </div>
     </section>
@@ -269,12 +283,15 @@
             <!-- Left Side: Text and Button -->
             <div class="lab-text-col" data-animate="fade-right">
                 <span class="section-tag-new">• LABORATORY | RESEARCH & TESTING •</span>
-                <h2 class="section-title-new">Research, Testing &<br><span style="color: var(--accent-orange);">Innovation</span></h2>
+                <h2 class="section-title-new">Research, Testing &<br><span
+                        style="color: var(--accent-orange);">Innovation</span></h2>
                 <div class="title-separator"></div>
-                <p class="section-desc-new">Every approved food material is carefully evaluated and tested to support consistent processing, product development and continuous improvement.</p>
-                <a href="laboratory.html" class="btn btn-theme-new">Our R&D Approach <i class="ph ph-arrow-right"></i></a>
+                <p class="section-desc-new">Every approved food material is carefully evaluated and tested to support
+                    consistent processing, product development and continuous improvement.</p>
+                <a href="laboratory.html" class="btn btn-theme-new">Our R&D Approach <i
+                        class="ph ph-arrow-right"></i></a>
             </div>
-            
+
             <!-- Right Side: The 6 feature cards -->
             <div class="lab-features-col" data-animate="fade-left">
                 <div class="lab-feature-new">
@@ -328,9 +345,10 @@
         <div class="container">
             <div class="section-header text-center" data-animate="fade-up">
                 <span class="section-tag" style="color: var(--primary-green);">— WHY CHOOSE LOOPGRUB —</span>
-                <h2 class="section-title">Value, Technology & <span style="color: var(--accent-orange);">Responsibility</span></h2>
+                <h2 class="section-title">Value, Technology & <span
+                        style="color: var(--accent-orange);">Responsibility</span></h2>
             </div>
-            
+
             <div class="features-wrapper">
                 <div class="feature-card" data-animate="fade-up" style="transition-delay: 0.1s">
                     <i class="ph ph-cpu"></i>
@@ -365,13 +383,14 @@
     <section id="sustainability" class="sustainability-banner" data-animate="fade-up">
         <div class="banner-container">
 
-            
+
             <div class="banner-content">
                 <h2>For a Better Future, For Our Planet</h2>
                 <p>Recovering resources • Reducing waste • Building a sustainable future</p>
-                <a href="#sustainability" class="btn btn-dark mt-2" style="margin-top: 1.5rem;">Our Sustainability <i class="ph ph-arrow-right"></i></a>
+                <a href="#sustainability" class="btn btn-dark mt-2" style="margin-top: 1.5rem;">Our Sustainability <i
+                        class="ph ph-arrow-right"></i></a>
             </div>
-            
+
 
 
             <div class="banner-bg-right">
@@ -388,7 +407,8 @@
                     <a href="index.html" class="footer-logo">
                         <img src="assets/images/logo-white.png" alt="Loop Grub Logo" class="footer-logo-img">
                     </a>
-                    <p class="brand-desc">Technology-driven food resource recovery company transforming approved food materials into valuable resources through innovation and sustainable solutions.</p>
+                    <p class="brand-desc">Technology-driven food resource recovery company transforming approved food
+                        materials into valuable resources through innovation and sustainable solutions.</p>
                     <div class="trust-badges">
                         <span><i class="ph-fill ph-check-circle"></i> Sustainable</span>
                         <span><i class="ph-fill ph-check-circle"></i> Responsible</span>
@@ -396,7 +416,7 @@
                         <span><i class="ph-fill ph-check-circle"></i> Trusted</span>
                     </div>
                 </div>
-                
+
                 <div class="footer-col">
                     <h4>COMPANY</h4>
                     <ul>
@@ -407,7 +427,7 @@
                         <li><a href="contact.html#careers">Careers</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col">
                     <h4>MATERIALS</h4>
                     <ul>
@@ -416,7 +436,7 @@
                         <li><a href="materials.html#handle">Materials We Handle</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col">
                     <h4>LABORATORY</h4>
                     <ul>
@@ -425,7 +445,7 @@
                         <li><a href="laboratory.html#product">Product Development</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col">
                     <h4>TECHNOLOGY</h4>
                     <ul>
@@ -434,7 +454,7 @@
                         <li><a href="technology.html#quality">Quality Standards</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col">
                     <h4>SUSTAINABILITY</h4>
                     <ul>
@@ -443,7 +463,7 @@
                         <li><a href="sustainability.html#circular">Circular Economy</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col">
                     <h4>CONTACT</h4>
                     <ul>
@@ -453,7 +473,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2026 Loop Grub Solutions Pvt. Ltd. All Rights Reserved.</p>
                 <div class="social-links">
@@ -467,6 +487,18 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var typed = new Typed('#typed-title', {
+                strings: ['Turning<br>Waste into<br><span class="highlight">Resources</span>'],
+                typeSpeed: 50,
+                showCursor: true,
+                cursorChar: '|'
+            });
+        });
+    </script>
     <script src="script.js"></script>
 </body>
+
 </html>

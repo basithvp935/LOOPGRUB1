@@ -46,57 +46,63 @@
     
     
     <!-- Technology Hero Section -->
-    <section class="tech-hero">
-        <div class="tech-hero-grid">
-            <div class="tech-hero-content-wrapper">
-                <div class="tech-hero-content" data-animate="fade-right">
-                    <div class="breadcrumbs">
-                        <a href="index.html">Home</a> <i class="ph ph-caret-right"></i> <span>Technology</span>
-                    </div>
-                    <h1 class="tech-title">ADVANCED TECHNOLOGY<br><span>FOR MAXIMUM RECOVERY</span></h1>
-                    <div class="tech-divider"></div>
-                    <h3 class="tech-subtitle">Smart Technology. Efficient Processes. Sustainable Future.</h3>
-                    <p class="tech-desc">
-                        At LoopGrub, we combine innovation, automation and intelligent process design to recover maximum value from approved food materials while ensuring safety, quality and environmental responsibility.
-                    </p>
-                    <a href="#process" class="btn btn-primary" style="margin-top: 2rem;">Explore Our Process <i class="ph ph-arrow-right"></i></a>
-                </div>
+    <!-- Technology Hero Section (Styled like Laboratory/Materials) -->
+    <section class="about-hero dark-hero">
+        <div class="container about-hero-container-centered" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div class="hero-tag" data-animate="fade-up">
+                <span class="dot"></span> LOOPGRUB SOLUTIONS
             </div>
-            <div class="tech-hero-image" data-animate="fade-left">
-                <img src="assets/images/images/loopmachi.jpeg" alt="Technology Machinery" class="shadow-img">
+            <h1 class="about-hero-title" data-animate="fade-up" style="transition-delay: 0.1s">Advanced <span class="text-green">Technology</span></h1>
+            <p class="about-hero-desc" data-animate="fade-up" style="transition-delay: 0.2s" style="max-width: 800px; text-align: center;">
+                Smart Technology. Efficient Processes. Sustainable Future. At LoopGrub, we combine innovation, automation and intelligent process design to recover maximum value from approved food materials while ensuring safety, quality and environmental responsibility.
+            </p>
+            <div class="hero-bottom-pill" data-animate="fade-up" style="transition-delay: 0.3s">
+                <a href="index.html"><i class="ph ph-house"></i> Home</a> 
+                <i class="ph ph-caret-right separator"></i> 
+                <span class="text-green">Technology</span>
             </div>
         </div>
     </section>
 
-    <!-- Top Features Section -->
-    <section class="tech-top-features" style="padding-top: 0; padding-bottom: 1rem;">
+    <!-- Visual & Features Split Section -->
+    <section class="tech-split" style="padding: 4rem 0 6rem; background-color: var(--light-bg); position: relative; overflow: hidden;">
         <div class="container">
-            <div class="tech-features-box">
-                <div class="tech-features-grid">
-                    <div class="tech-feature">
-                        <div class="tech-feature-icon"><i class="ph-bold ph-gear"></i></div>
-                        <h4>INNOVATIVE<br>MACHINES</h4>
-                        <p>Custom designed and engineered machines for high efficiency and reliability.</p>
-                    </div>
-                    <div class="tech-feature">
-                        <div class="tech-feature-icon"><i class="ph-bold ph-robot"></i></div>
-                        <h4>AUTOMATION &<br>CONTROL</h4>
-                        <p>Automated systems reduce manual handling, improve safety and ensure consistency.</p>
-                    </div>
-                    <div class="tech-feature">
-                        <div class="tech-feature-icon"><i class="ph-bold ph-chart-line-up"></i></div>
-                        <h4>HIGH RECOVERY<br>EFFICIENCY</h4>
-                        <p>Advanced process control ensures maximum resource recovery with minimal loss.</p>
-                    </div>
-                    <div class="tech-feature">
-                        <div class="tech-feature-icon"><i class="ph-bold ph-shield-check"></i></div>
-                        <h4>HYGIENIC &<br>SAFE PROCESS</h4>
-                        <p>Enclosed systems minimize human contact and ensure hygiene and operator safety.</p>
-                    </div>
-                    <div class="tech-feature">
-                        <div class="tech-feature-icon"><i class="ph-bold ph-leaf"></i></div>
-                        <h4>SUSTAINABLE<br>BY DESIGN</h4>
-                        <p>Energy efficient technology with lower emissions and minimal environmental impact.</p>
+            <!-- Split Layout: Image Left, Boxes Right -->
+            <div class="hero-split-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: stretch; position: relative; z-index: 10;">
+                
+                <!-- Left Side: Image -->
+                <div class="hero-split-image" data-animate="fade-right">
+                    <img src="assets/images/images/loopmachi.jpeg" alt="Technology Machinery">
+                </div>
+
+                <!-- Right Side: 5 Boxes -->
+                <div class="features-bar-box" data-animate="fade-left" style="width: 100%; display: flex; align-items: center; background: transparent; padding: 0; box-shadow: none;">
+                    <div class="lab-features-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.85rem; width: 100%;">
+                        <div class="lab-feature">
+                            <div class="lab-feature-icon"><i class="ph-bold ph-gear"></i></div>
+                            <h4>Innovative<br>Machines</h4>
+                            <p>Custom designed and engineered machines for high efficiency and reliability.</p>
+                        </div>
+                        <div class="lab-feature">
+                            <div class="lab-feature-icon"><i class="ph-bold ph-robot"></i></div>
+                            <h4>Automation &<br>Control</h4>
+                            <p>Automated systems reduce manual handling, improve safety and ensure consistency.</p>
+                        </div>
+                        <div class="lab-feature">
+                            <div class="lab-feature-icon"><i class="ph-bold ph-chart-line-up"></i></div>
+                            <h4>High Recovery<br>Efficiency</h4>
+                            <p>Advanced process control ensures maximum resource recovery with minimal loss.</p>
+                        </div>
+                        <div class="lab-feature">
+                            <div class="lab-feature-icon"><i class="ph-bold ph-shield-check"></i></div>
+                            <h4>Hygienic &<br>Safe Process</h4>
+                            <p>Enclosed systems minimize human contact and ensure hygiene and operator safety.</p>
+                        </div>
+                        <div class="lab-feature" style="grid-column: 1 / -1;">
+                            <div class="lab-feature-icon"><i class="ph-bold ph-leaf"></i></div>
+                            <h4>Sustainable<br>By Design</h4>
+                            <p>Energy efficient technology with lower emissions and minimal environmental impact.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -180,14 +186,14 @@
             </div>
             
             <!-- Process Banner -->
-            <div class="process-banner text-center" style="margin-top: 3rem; padding: 1.5rem; background: var(--light-bg); border-radius: 8px;">
-                <p style="margin: 0;"><i class="ph-fill ph-leaf" style="color: var(--primary-green);"></i> Our technology is built to handle bulk volumes with consistent quality, minimum waste and maximum value recovery.</p>
+            <div class="process-banner text-center" style="margin-top: 3rem; padding: 1.5rem; background: #00204D; color: var(--white); border-radius: 8px;">
+                <p style="margin: 0;"><i class="ph-fill ph-leaf" style="color: #82c341;"></i> Our technology is built to handle bulk volumes with consistent quality, minimum waste and maximum value recovery.</p>
             </div>
         </div>
     </section>
 
     <!-- Technology Advantages Section -->
-    <section id="quality" class="tech-advantages section-padding" style="background-color: var(--white); padding-top: 2rem;">
+    <section id="quality" class="tech-advantages section-padding" style="background-color: var(--white); padding-top: 2rem; padding-bottom: 1rem;">
         <div class="container">
             <div class="section-header text-center">
                 <div class="section-divider-center">
@@ -233,9 +239,9 @@
     </section>
 
     <!-- Innovation Box Section -->
-    <section id="innovation" class="tech-innovation section-padding" style="padding-top: 2rem;">
+    <section id="innovation" class="tech-innovation section-padding" style="padding-top: 0; padding-bottom: 4rem;">
         <div class="container">
-            <div class="innovation-box">
+            <div class="innovation-box" style="margin-top: 0;">
                 <div class="inn-img-col">
                     <img src="assets/images/images/techno.jpeg" alt="Global Innovation">
                 </div>

@@ -17,7 +17,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="materials-page">
 
     <!-- Sticky Navigation -->
     <nav id="navbar" class="navbar">
@@ -43,75 +43,79 @@
         </div>
     </nav>
 
-    <!-- Materials Hero Section -->
-    <section class="materials-hero">
-        <div class="materials-hero-bg">
-            <div class="container materials-hero-container">
-                <div class="materials-hero-content" data-animate="fade-right">
-                    <div class="breadcrumbs">
-                        <a href="index.html">Home</a> <i class="ph ph-caret-right"></i> <span>Materials We Recover</span>
-                    </div>
-                    <h1 class="materials-hero-title">MATERIALS<br><span>WE RECOVER</span></h1>
-                    <div class="hero-divider">
-                        <span class="line"></span>
-                        <i class="ph-fill ph-leaf"></i>
-                        <span class="line"></span>
-                    </div>
-                    <p class="materials-hero-desc">
-                        We recover value from approved food materials and transform them into valuable resources through innovative and sustainable processing.
-                    </p>
-                </div>
+    <!-- Materials Hero Section (Styled like About) -->
+    <section class="about-hero dark-hero">
+        <div class="container about-hero-container-centered" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div class="hero-tag" data-animate="fade-up">
+                <span class="dot"></span> LOOPGRUB SOLUTIONS
             </div>
-            
-            <div class="materials-hero-visual" data-animate="fade-left">
-                <img src="assets/images/images/materialsab.jpeg" alt="Recover Transform Reuse">
-                <div class="hero-circle-overlay">
-                    <svg width="280" height="280" viewBox="0 0 110 110" class="hero-arrows-svg">
-                        <path d="M 61.60,17.58 A 38 38 0 0 1 91.71,64.84 L 86.30,61.65 L 91.37,76.00 L 105.86,65.81 L 99.43,66.91 A 46 46 0 0 0 62.99,9.70 L 69.36,15.53 Z" fill="#2b5e32" />
-                        <path d="M 61.60,17.58 A 38 38 0 0 1 91.71,64.84 L 86.30,61.65 L 91.37,76.00 L 105.86,65.81 L 99.43,66.91 A 46 46 0 0 0 62.99,9.70 L 69.36,15.53 Z" fill="#4d7442" transform="rotate(120 55 55)" />
-                        <path d="M 61.60,17.58 A 38 38 0 0 1 91.71,64.84 L 86.30,61.65 L 91.37,76.00 L 105.86,65.81 L 99.43,66.91 A 46 46 0 0 0 62.99,9.70 L 69.36,15.53 Z" fill="#1b4d2a" transform="rotate(240 55 55)" />
-                    </svg>
-                    <div class="hero-circle-bg"></div>
-                    <div class="circle-text">
-                        <span>RECOVER</span>
-                        <span>TRANSFORM</span>
-                        <span>REUSE</span>
-                    </div>
-                    <i class="ph-fill ph-leaf" style="z-index: 3; position: relative;"></i>
-                </div>
+            <h1 class="about-hero-title" data-animate="fade-up" style="transition-delay: 0.1s">Materials <span class="text-green">We Recover</span></h1>
+            <p class="about-hero-desc" data-animate="fade-up" style="transition-delay: 0.2s" style="max-width: 800px; text-align: center;">
+                We recover value from approved food materials and transform them into valuable resources through innovative and sustainable processing.
+            </p>
+            <div class="hero-bottom-pill" data-animate="fade-up" style="transition-delay: 0.3s">
+                <a href="index.html"><i class="ph ph-house"></i> Home</a> 
+                <i class="ph ph-caret-right separator"></i> 
+                <span class="text-green">Materials</span>
             </div>
         </div>
-        
-        <!-- Green Features Bar -->
-        <div class="container" style="position: relative; z-index: 10; margin-top: -3rem;">
-            <div class="features-bar-box">
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <i class="ph ph-shield-check"></i>
-                        <div class="feature-text">
-                            <h4>APPROVED & SAFE FOOD MATERIALS</h4>
-                            <p>Complete traceability and compliance</p>
+    </section>
+
+    <!-- Visual & Features Split Section -->
+    <section class="materials-split" style="padding: 4rem 0 6rem; background-color: var(--light-bg); position: relative; overflow: hidden;">
+        <div class="container">
+            <!-- Split Layout: Image Left, Boxes Right -->
+            <div class="hero-split-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: stretch; position: relative; z-index: 10;">
+                
+                <!-- Left Side: Image -->
+                <div class="hero-split-image" data-animate="fade-right">
+                    <img src="assets/images/images/materialsab.jpeg" alt="Recover Transform Reuse">
+                    <div class="hero-circle-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                        <svg width="280" height="280" viewBox="0 0 110 110" class="hero-arrows-svg">
+                            <path d="M 61.60,17.58 A 38 38 0 0 1 91.71,64.84 L 86.30,61.65 L 91.37,76.00 L 105.86,65.81 L 99.43,66.91 A 46 46 0 0 0 62.99,9.70 L 69.36,15.53 Z" fill="#2b5e32" />
+                            <path d="M 61.60,17.58 A 38 38 0 0 1 91.71,64.84 L 86.30,61.65 L 91.37,76.00 L 105.86,65.81 L 99.43,66.91 A 46 46 0 0 0 62.99,9.70 L 69.36,15.53 Z" fill="#4d7442" transform="rotate(120 55 55)" />
+                            <path d="M 61.60,17.58 A 38 38 0 0 1 91.71,64.84 L 86.30,61.65 L 91.37,76.00 L 105.86,65.81 L 99.43,66.91 A 46 46 0 0 0 62.99,9.70 L 69.36,15.53 Z" fill="#1b4d2a" transform="rotate(240 55 55)" />
+                        </svg>
+                        <div class="hero-circle-bg"></div>
+                        <div class="circle-text">
+                            <span>RECOVER</span>
+                            <span>TRANSFORM</span>
+                            <span>REUSE</span>
                         </div>
+                        <i class="ph-fill ph-leaf" style="z-index: 3; position: relative;"></i>
                     </div>
-                    <div class="feature-item">
-                        <i class="ph ph-flask"></i>
-                        <div class="feature-text">
-                            <h4>STRICT QUALITY STANDARDS</h4>
-                            <p>Every batch inspected and tested for safety</p>
+                </div>
+
+                <!-- Right Side: 4 Boxes -->
+                <div class="features-bar-box" data-animate="fade-left" style="width: 100%; display: flex; align-items: center;">
+                    <div class="features-grid" style="width: 100%;">
+                        <div class="feature-item">
+                            <i class="ph ph-shield-check"></i>
+                            <div class="feature-text">
+                                <h4>APPROVED & SAFE FOOD MATERIALS</h4>
+                                <p>Complete traceability and compliance</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="feature-item">
-                        <i class="ph ph-gear"></i>
-                        <div class="feature-text">
-                            <h4>ADVANCED PROCESSING TECHNOLOGY</h4>
-                            <p>Preserving value and ensuring efficiency</p>
+                        <div class="feature-item">
+                            <i class="ph ph-flask"></i>
+                            <div class="feature-text">
+                                <h4>STRICT QUALITY STANDARDS</h4>
+                                <p>Every batch inspected and tested for safety</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="feature-item">
-                        <i class="ph ph-arrows-clockwise"></i>
-                        <div class="feature-text">
-                            <h4>SUSTAINABLE RESOURCE RECOVERY</h4>
-                            <p>Creating a circular impact for a better tomorrow</p>
+                        <div class="feature-item">
+                            <i class="ph ph-gear"></i>
+                            <div class="feature-text">
+                                <h4>ADVANCED PROCESSING TECHNOLOGY</h4>
+                                <p>Preserving value and ensuring efficiency</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="ph ph-arrows-clockwise"></i>
+                            <div class="feature-text">
+                                <h4>SUSTAINABLE RESOURCE RECOVERY</h4>
+                                <p>Creating a circular impact for a better tomorrow</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -120,7 +124,7 @@
     </section>
 
     <!-- Input Materials Section -->
-    <section id="approved" class="input-materials" style="padding-top: 3rem; padding-bottom: 2rem;">
+    <section id="approved" class="input-materials" style="padding-top: 3rem; padding-bottom: 0;">
         <div class="container">
             <div class="border-title-container">
                 <h2 class="section-title">INPUT MATERIALS <i class="ph-fill ph-leaf" style="color: var(--primary-color);"></i></h2>
@@ -236,7 +240,7 @@
     </section>
 
     <!-- Bottom Features Section -->
-    <section class="bottom-features" style="padding: 2rem 0 2rem;">
+    <section class="bottom-features" style="padding: 0 0 4rem;">
         <div class="container">
             <div class="bottom-features-grid">
                 <div class="b-feature">
